@@ -1,0 +1,16 @@
+---
+export const prerender = true; //unutk merubah menjadi static;
+import Layout from "../layouts/Layout.astro";
+
+const title = "about";
+---
+
+<Layout>
+    <h1>{title}</h1>
+</Layout>
+
+<style>
+    h1 {
+        color: red;
+    }
+</style>
