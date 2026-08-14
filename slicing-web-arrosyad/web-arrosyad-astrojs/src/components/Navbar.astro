@@ -1,0 +1,48 @@
+---
+// Komponen Navbar
+---
+
+<header class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+    >
+        <!-- Logo & Nama Ma'had -->
+        <div class="flex items-center gap-3">
+            <img
+                src="/images/logo-arrosyad.png"
+                alt="Logo Ar-Rosyad"
+                class="h-10 w-auto object-contain"
+            />
+            <span class="font-bold text-xl text-gray-900 tracking-wide"
+                >Ar-Rosyad</span
+            >
+        </div>
+
+        <!-- Tombol Donasi di Kanan -->
+        <div>
+            <a
+                href="#donasi"
+                class="bg-[#84cc16] hover:bg-[#65a30d] text-white font-medium px-6 py-2.5 rounded-lg transition duration-200 shadow-sm"
+            >
+                Donasi
+            </a>
+        </div>
+    </div>
+</header>
+
+--- // Komponen Hero Section ---
+
+<section
+    class="relative h-[90vh] min-h-[600px] flex items-center justify-center text-center px-4"
+>
+    <!-- Background Image dengan Overlay Gelap -->
+    <div class="absolute inset-0 z-0">
+        <img
+            src="/images/hero-bg.jpg"
+            alt="Ma'had Ar-Rosyad Background"
+            class="w-full h-full object-cover"
+        />
+        <!-- Lapisan hitam transparan agar teks terbaca jelas -->
+        <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+</section>
