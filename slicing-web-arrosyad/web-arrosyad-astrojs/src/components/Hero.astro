@@ -1,0 +1,56 @@
+---
+// Komponen Hero Section
+---
+
+<section
+    class="relative h-[90vh] min-h-[600px] flex items-center justify-center text-center px-4 bg-cover bg-center bg-no-repeat"
+    style="background-image: url('/images/hero-bg.jpg');"
+>
+    <!-- Lapisan Hitam Transparan (Overlay) -->
+    <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+    <!-- Konten Hero -->
+    <div
+        class="relative z-10 max-w-4xl mx-auto text-white flex flex-col items-center"
+    >
+        <!-- Kalimat Arab / Surah -->
+        <p
+            class="text-lg sm:text-xl font-arabic tracking-wider mb-4 text-gray-200"
+        >
+            [Surah Thaha: 114] ﴿ وَقُل رَّبِّ زِدْنِي عِلْمًا ﴾
+        </p>
+
+        <!-- Judul Utama -->
+        <h1
+            class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
+        >
+            Ma'had Ar-Rosyad Al-Islamiy Kediri
+        </h1>
+
+        <!-- Deskripsi Singkat -->
+        <p
+            class="text-base sm:text-lg text-gray-300 max-w-2xl mb-10 leading-relaxed"
+        >
+            Lembaga Pendidikan Islam Berbasis Al-Qur'an dan Sunnah sesuai Manhaj
+            Salafush Shalih. Membentuk generasi Rabbani yang Qurani sejak 2003.
+        </p>
+
+        <!-- Tombol Aksi (CTA) -->
+        <div
+            class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
+        >
+            <a
+                href="#psb"
+                class="w-full sm:w-auto bg-[#84cc16] hover:bg-[#65a30d] text-white font-semibold px-8 py-3.5 rounded-lg transition duration-200 shadow-lg"
+            >
+                Daftar PSB 2026/2027
+            </a>
+            <a
+                href="#kenali-kami"
+                class="w-full sm:w-auto border-2 border-white hover:bg-white hover:text-gray-900 text-white font-semibold px-8 py-3.5 rounded-lg transition duration-200"
+            >
+                Kenali Kami
+            </a>
+        </div>
+    </div>
+</section>
