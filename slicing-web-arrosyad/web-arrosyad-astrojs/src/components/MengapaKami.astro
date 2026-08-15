@@ -1,0 +1,53 @@
+---
+// Komponen Mengapa Memilih Ma'had Ar-Rosyad (Judul Proporsional)
+const keunggulan = [
+  "Pendidikan Berbasis Al-Qur'an dan Sunnah",
+  "Asatidzah Berkualitas dan Berpengalaman",
+  "Program Tahfidz dan Mulazamah Intensif",
+  "Lingkungan Islami yang Kondusif",
+  "Kurikulum Terstruktur Sesuai Tingkatan",
+  "Program Ekstrakurikuler Berkarakter",
+  "Biaya Pendidikan Terjangkau",
+  "Jaringan Alumni yang Produktif"
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-12 gap-12 items-center">
+    
+    <!-- Kolom Kiri: Gambar -->
+    <div class="md:col-span-5">
+      <img 
+        src="/images/mengapa-kami.jpg" 
+        alt="Suasana Belajar Ma'had Ar-Rosyad" 
+        class="rounded-3xl shadow-xl w-full max-h-[75vh] object-cover"
+      />
+    </div>
+
+    <!-- Kolom Kanan: Teks Keunggulan -->
+    <div class="md:col-span-7">
+      <!-- Ukuran judul diperkecil dari text-3xl/4xl menjadi text-2xl/3xl agar pas dan elegan -->
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+        Mengapa Memilih Ma'had Ar-Rosyad?
+      </h2>
+
+      <div class="flex flex-col">
+        {keunggulan.map((item, index) => (
+          <div class={`flex items-center gap-4 py-3.5 ${index !== keunggulan.length - 1 ? 'border-b border-gray-100' : ''}`}>
+            <!-- Ikon Centang Hijau -->
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <!-- Teks Keunggulan -->
+            <span class="text-gray-800 font-medium text-base">
+              {item}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
