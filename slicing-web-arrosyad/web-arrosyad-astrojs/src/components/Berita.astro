@@ -1,0 +1,86 @@
+---
+// Komponen Berita Terbaru (Kegiatan & Informasi)
+const daftarBerita = [
+  {
+    tanggal: "12 MEI 2026",
+    judul: "Pendaftaran PSB 2026/2027 Telah Dibuka",
+    deskripsi: "Ma'had Ar-Rosyad Al-Islamiy Kediri membuka pendaftaran peserta didik baru untuk tahun ajaran 2026/2027.",
+    image: "/images/mengapa-kami.jpg", // Ganti dengan path gambar berita yang sesuai
+    link: "#"
+  },
+  {
+    tanggal: "5 MEI 2026",
+    judul: "Dauroh Syari'yyah Bulan Ramadhan",
+    deskripsi: "Kajian intensif kitab-kitab para ulama selama bulan Ramadhan yang diikuti ratusan santri dan jamaah.",
+    image: "/images/mengapa-kami.jpg",
+    link: "#"
+  },
+  {
+    tanggal: "28 APRIL 2026",
+    judul: "Khataman Al-Qur'an 30 Juz Santri",
+    deskripsi: "Alhamdulillah, 15 santri Ma'had Putra telah berhasil menyelesaikan hafalalan Al-Qur'an 30 juz.",
+    image: "/images/mengapa-kami.jpg",
+    link: "#"
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h3 class="text-green-600 font-semibold tracking-wider uppercase text-sm mb-2">
+        BERITA TERBARU
+      </h3>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Kegiatan & Informasi
+      </h2>
+    </div>
+
+    <!-- Grid Card Berita -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {daftarBerita.map((item) => (
+        <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl group">
+          
+          <div>
+            <!-- Gambar Berita -->
+            <div class="overflow-hidden aspect-video">
+              <img 
+                src={item.image} 
+                alt={item.judul} 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
+            <!-- Konten Teks -->
+            <div class="p-6">
+              <span class="text-green-600 text-xs font-bold tracking-wider block mb-2">
+                {item.tanggal}
+              </span>
+              <h3 class="font-bold text-gray-900 text-lg mb-3 leading-snug group-hover:text-green-600 transition-colors">
+                {item.judul}
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                {item.deskripsi}
+              </p>
+            </div>
+          </div>
+
+          <!-- Tombol Baca Selengkapnya -->
+          <div class="px-6 pb-6 pt-2">
+            <a 
+              href={item.link} 
+              class="text-green-600 font-medium text-sm inline-flex items-center gap-1 hover:text-green-700 transition-colors"
+            >
+              Baca selengkapnya 
+              <span class="transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
