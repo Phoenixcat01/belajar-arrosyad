@@ -1,0 +1,89 @@
+---
+// Komponen Program Pendidikan Unggulan
+const programs = [
+  {
+    title: "PAUD Ar Rosyad",
+    description: "PAUD Ar Rosyad merupakan jenjang pendidikan pertama di Ma'had Ar-Rosyad Al-Islamiy. Berdiri sejak tahun 2010, kami menye...",
+    icon: "child", // Kita bisa pakai SVG atau ikon sederhana
+    link: "#paud"
+  },
+  {
+    title: "Kuttab Ar-Rosyad",
+    description: "Kuttab Ar-Rosyad adalah jenjang pendidikan dasar Islam untuk anak-anak usia sekolah dasar. Program ini fokus pada pemben...",
+    icon: "book",
+    link: "#kuttab"
+  },
+  {
+    title: "Ma'had Putra — Sya'bah Lughoh",
+    description: "Ma'had Putra (Sya'bah Lughoh) adalah program unggulan Ma'had Ar-Rosyad yang dirancang untuk remaja usia 12-17 tahun. Pro...",
+    icon: "graduation-cap",
+    link: "#mahad-putra"
+  },
+  {
+    title: "Ma'had Ar-Rosyad Putri",
+    description: "Ma'had Ar-Rosyad Putri menyediakan program pendidikan Islam intensif khusus untuk santriwati. Program ini mencakup tahfi...",
+    icon: "heart",
+    link: "#mahad-putri"
+  },
+  {
+    title: "Ma'had Aliy",
+    description: "Ma'had Aliy adalah program lanjutan bagi lulusan SMA/sederajat yang ingin mendalami studi Islam secara intensif. Program...",
+    icon: "award",
+    link: "#mahad-aliy"
+  }
+];
+---
+
+<section id="program" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    
+    <!-- Header Section -->
+    <h3 class="text-green-600 font-semibold tracking-wider uppercase text-sm mb-2">
+      PROGRAM KAMI
+    </h3>
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      Program Pendidikan Unggulan
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-16">
+      Kami menyediakan jenjang pendidikan Islam yang terintegrasi dari usia dini hingga dewasa, dengan kurikulum yang terstruktur dan asatidzah yang berkompeten.
+    </p>
+
+    <!-- Grid Card Program -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 text-left">
+      {programs.map((prog) => (
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-green-500 group">
+          
+          <div>
+            <!-- Icon Bulat Hijau Muda -->
+            <div class="w-12 h-12 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-green-600 group-hover:text-white">
+              <!-- Contoh SVG Ikon sederhana -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+
+            <!-- Judul Program -->
+            <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">
+              {prog.title}
+            </h3>
+
+            <!-- Deskripsi -->
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+              {prog.description}
+            </p>
+          </div>
+
+          <!-- Link Aksi / Detail -->
+          <div>
+            <a href={prog.link} class="inline-flex items-center text-sm font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">
+              Lihat detail 
+              <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
