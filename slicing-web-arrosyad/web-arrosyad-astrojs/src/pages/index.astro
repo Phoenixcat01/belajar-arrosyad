@@ -1,11 +1,19 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
+import Sambutan from "../components/Sambutan.astro";
+import Program from "../components/Program.astro";
+import Stats from "../components/Stats.astro";
+import MengapaKami from "../components/MengapaKami.astro";
+import Testimoni from "../components/Testimoni.astro";
+import Cta from "../components/Cta.astro";
+import Berita from "../components/Berita.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,5 +23,13 @@ import "../styles/global.css";
 	<body class="bg-white text-gray-800 antialiased font-sans">
 		<Navbar />
 		<Hero />
+		<Sambutan />
+		<Program />
+		<Stats />
+		<MengapaKami />
+		<Testimoni />
+		<Cta />
+		<Berita />
+		<Footer />
 	</body>
 </html>
