@@ -1,0 +1,71 @@
+---
+// Komponen Testimoni (Apa Kata Mereka?)
+const testimonis = [
+  {
+    quote: "Ma'had Ar-Rosyad adalah tempat yang sangat berpengaruh dalam pembentukan karakter dan keilmuan anak-anak kami. Anak kami menjadi lebih disiplin, mencintai Al-Qur'an, dan memahami agama dengan benar.",
+    name: "Wali Santri",
+    location: "Kediri"
+  },
+  {
+    quote: "Alhamdulillah, berkat program tahfidz dan mulazamah di Ar-Rosyad, saya bisa menghafal banyak mutun dan memahami kitab-kitab para ulama secara langsung.",
+    name: "Alumni Ma'had Putra",
+    location: ""
+  },
+  {
+    quote: "Program pendidikan yang terstruktur dan asatidzah yang berkompeten menjadikan Ar-Rosyad pilihan terbaik untuk pendidikan Islam anak-anak kami.",
+    name: "Wali Santri",
+    location: "Nganjuk"
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h3 class="text-green-600 font-semibold tracking-wider uppercase text-sm mb-2">
+        TESTIMONI
+      </h3>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+        Apa Kata Mereka?
+      </h2>
+    </div>
+
+    <!-- Grid Card Testimoni -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonis.map((item) => (
+        <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          
+          <div>
+            <!-- Ikon Tanda Kutip Hijau -->
+            <div class="text-green-600 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.998v10h-9.998z"/>
+              </svg>
+            </div>
+
+            <!-- Isi Testimoni (Huruf Miring) -->
+            <p class="text-gray-600 italic text-base leading-relaxed mb-8">
+              "{item.quote}"
+            </p>
+          </div>
+
+          <!-- Identitas Pemberi Testimoni -->
+          <div class="border-t border-gray-100 pt-4">
+            <h4 class="font-bold text-gray-900 text-base">
+              {item.name}
+            </h4>
+            {item.location && (
+              <p class="text-gray-500 text-sm mt-0.5">
+                {item.location}
+              </p>
+            )}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
