@@ -1,0 +1,30 @@
+---
+// Komponen Statistik / Count Section
+const stats = [
+  { value: "20+", label: "Tahun Mengabdi" },
+  { value: "5", label: "Jenjang Pendidikan" },
+  { value: "100+", label: "Hafalan Mutun" },
+  { value: "50+", label: "Video Edukasi" },
+];
+---
+
+<section class="py-16 bg-white border-y border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      {stats.map((stat) => (
+        <div class="p-4">
+          <!-- Angka / Nilai Counter -->
+          <div class="text-4xl sm:text-5xl lg:text-6xl font-bold text-green-700 mb-2 tracking-tight">
+            {stat.value}
+          </div>
+          <!-- Label Keterangan -->
+          <div class="text-sm sm:text-base font-medium text-gray-600">
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
